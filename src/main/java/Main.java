@@ -1,7 +1,14 @@
-package org.example;
+
+
+import model.Developer;
+import repository.JdbcDeveloperRepositoryImpl;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        JdbcDeveloperRepositoryImpl jdbc = new JdbcDeveloperRepositoryImpl();
+        List <Developer> developers = jdbc.getDeveloperData("select * from developer");
+        System.out.println(developers);
     }
 }
