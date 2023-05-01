@@ -1,10 +1,8 @@
 package repository;
 
 import model.Developer;
-
-import java.util.List;
+import model.GenericRepository;
 
 public interface DeveloperRepository extends GenericRepository<Developer, Long> {
-    public List<Developer> getDeveloperData(String query);
 
 }

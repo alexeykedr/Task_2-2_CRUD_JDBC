@@ -14,12 +14,9 @@ public class DBUtils {
     public static Connection getConnection(){
         Connection connection;
 
-        Properties properties = new Properties();
-//       dbUrl = "jdbc:postgresql://localhost:5432/postgres;INIT=RUNSCRIPT FROM 'classpath:init.sql';";
        dbUrl = "jdbc:postgresql://localhost:5432/postgres";
        dbLogin = "maxim";
        dbPassword = "1";
-
 
         try {
             connection = DriverManager.getConnection(dbUrl, dbLogin, dbPassword);

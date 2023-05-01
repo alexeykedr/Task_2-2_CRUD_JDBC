@@ -1,7 +1,6 @@
 
 
 import model.Developer;
-import repository.JdbcDeveloperRepositoryImpl;
 
 import java.util.List;
 
