@@ -23,6 +23,8 @@ public class Developer {
     public Developer() {
     }
 
+
+
     public Long getId() {
         return id;
     }
