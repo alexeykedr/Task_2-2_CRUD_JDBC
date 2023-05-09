@@ -1,24 +1,16 @@
-package sql;
+package processor;
+
+import util.JdbcUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class JdbcOperator {
-    static Connection connection;
+public class JdbcExecutor {
 
-    public JdbcOperator() {
-    }
-
-    private static Connection getConnection() {
-        if (connection == null) {
-            connection = ConnectionSql.getConnection();
-        }
-        return connection;
-    }
 
     public static <T> T execute(String sql, ProcessSqlRequest<T> processSqlRequest) {
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+        try (PreparedStatement preparedStatement = JdbcUtils.prepareStatementWithGenerateKeys(sql)) {
             return processSqlRequest.run(preparedStatement);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -27,7 +19,7 @@ public class JdbcOperator {
 
     public static <T> T transactionalExecute(SqlTransaction<T> executor) {
         try {
-            Connection connection = getConnection();
+            Connection connection = JdbcUtils.getConnection();
 
             try {
                 connection.setAutoCommit(false);
@@ -39,17 +31,14 @@ public class JdbcOperator {
                 e.printStackTrace();
                 throw new RuntimeException(e);
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
+
     public static void closeConnection() {
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        JdbcUtils.closeConnection();
     }
 
 }

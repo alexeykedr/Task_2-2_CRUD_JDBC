@@ -5,13 +5,20 @@ import java.util.Objects;
 public class Skill {
     private Long id;
     private String name;
+    private Developer developer;
+
+    public Skill(Long id, String name, Developer developer) {
+        this.id = id;
+        this.name = name;
+        this.developer = developer;
+    }
+
+
 
     public Skill(Long id, String name) {
         this.id = id;
         this.name = name;
-    }
 
-    public Skill() {
     }
 
     public Long getId() {
@@ -28,6 +35,10 @@ public class Skill {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setDeveloper(Developer developer) {
+        this.developer = developer;
     }
 
     @Override
@@ -50,4 +61,11 @@ public class Skill {
                 '}';
     }
 
+    public boolean isNew() {
+        return getId() == null;
+    }
+
+    public Developer getDeveloper() {
+        return developer;
+    }
 }

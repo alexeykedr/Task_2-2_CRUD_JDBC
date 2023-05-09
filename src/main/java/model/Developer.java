@@ -96,6 +96,9 @@ public class Developer {
                 ", status=" + status +
                 '}';
     }
+    public boolean isNew() {
+        return getId() == null;
+    }
 
 
 }

@@ -1,12 +1,18 @@
 package service;
 
 import model.*;
+import repository.GenericRepository;
 import repository.SpecialtyRepository;
+import repository.jdbc.JdbcSpecialtyRepositoryImpl;
 
 import java.util.List;
 
 public class SpecialtyService implements GenericRepository<Specialty, Long> {
-    SpecialtyRepository specialtyRepository;
+    final private SpecialtyRepository specialtyRepository;
+
+    public SpecialtyService() {
+        this.specialtyRepository = new JdbcSpecialtyRepositoryImpl();
+    }
 
     public SpecialtyService(SpecialtyRepository repository) {
         this.specialtyRepository = repository;

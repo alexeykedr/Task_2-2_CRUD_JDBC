@@ -1,46 +1,66 @@
 package controller;
 
 import model.Developer;
-import model.GenericRepository;
-import repository.DeveloperRepository;
+import repository.GenericRepository;
+import repository.jdbc.JdbcDeveloperRepositoryImpl;
 import service.DeveloperService;
-import view.ConsoleDeveloperView;
+import util.CheckCommandUtils;
 
 import java.util.List;
 
 public class DeveloperController implements GenericRepository<Developer, Long> {
-    DeveloperService developerService;
+    private final DeveloperService developerService;
 
     public DeveloperController() {
-        developerService = new DeveloperService(new DeveloperRepositoryJdbcImpl());
+        developerService = new DeveloperService(new JdbcDeveloperRepositoryImpl());
     }
 
     @Override
-    public Developer save(Developer entity) {
-        return null;
+    public Developer save(Developer developer) {
+        return developerService.save(developer);
+
     }
 
     @Override
-    public Developer update(Developer entity) {
-        return null;
+    public Developer update(Developer developer) {
+        if (developer == null){
+            return null;
+        }
+        if (developer.isNew()){
+            System.out.println("Developer is new, cannot be updated");
+            return null;
+        }
+        Developer developerUpdated = developerService.update(developer);
+        if (developerUpdated != null) {
+            System.out.println("Developer is updated");
+            System.out.println(developerUpdated);
+        } else {
+            System.out.println(CheckCommandUtils.ERR_ID);
+            System.out.println("Developer is not updated");
+        }
+        return developerUpdated;
     }
 
     @Override
-    public Developer getById(Long aLong) {
-        return null;
+    public Developer getById(Long id) {
+        Developer developer = developerService.getById(id);
+        if (developerService == null) {
+            System.out.println(CheckCommandUtils.splitter);
+            System.out.println("!!! Developer not found!!!");
+            System.out.println(CheckCommandUtils.splitter);
+        }
+        return developer;
+
     }
 
     @Override
-    public void deleteById(Long aLong) {
-
+    public void deleteById(Long id) {
+        developerService.deleteById(id);
     }
 
     @Override
     public List<Developer> getAll() {
-        return null;
+        return developerService.getAll();
     }
-
-
-    // Методы для обработки запросов пользователя и взаимодействия с сервисным слоем
 }
-//TODO: to make Controllers
+//TODO: to make Controllers - done

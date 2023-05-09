@@ -4,8 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792dd0ae-3c8e-46b6-9c0b-1fe0c1787cb1" name="Changes" comment="current work version">
+    <list default="true" id="792dd0ae-3c8e-46b6-9c0b-1fe0c1787cb1" name="Changes" comment="current work version 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/JdbcUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15aa2cee-46d8-4ebe-85ec-0f4692298239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15aa2cee-46d8-4ebe-85ec-0f4692298239/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15aa2cee-46d8-4ebe-85ec-0f4692298239/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15aa2cee-46d8-4ebe-85ec-0f4692298239/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15aa2cee-46d8-4ebe-85ec-0f4692298239/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15aa2cee-46d8-4ebe-85ec-0f4692298239/storage_v2/_src_/database/postgres.edMnLQ/schema/test_shema_for_task2_2.YqZ9TQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3accc3fb3633d025a2361188bc11cdbaf0426046" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3ba1987eeea9edab7fe569a6187f1a843231a764" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3ba1987eeea9edab7fe569a6187f1a843231a764" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fe4fee3ff668f2d814dac493a53ad55a4eac757" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5bedee2ab8469807008f41393d6f8eb6ae9af045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7807249283a6a5d9cfd17960437912c869a8087d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7807249283a6a5d9cfd17960437912c869a8087d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e6d47f68c2ed64b807ab3e34f7eccbbe0f5ef277" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/a/3accc3fb3633d025a2361188bc11cdbaf0426046" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/f/4fe4fee3ff668f2d814dac493a53ad55a4eac757" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/b/5bedee2ab8469807008f41393d6f8eb6ae9af045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/6/e6d47f68c2ed64b807ab3e34f7eccbbe0f5ef277" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DBUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DeveloperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DeveloperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GenericRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/GenericRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/DeveloperRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/DeveloperRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/SkillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SkillRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/SpecialtyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/SpecialtyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/jdbc/DeveloperRepositoryJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcDeveloperRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DeveloperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DeveloperService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SkillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SpecialtyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SpecialtyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sql/ConnectionSql.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sql/JdbcOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/processor/JdbcExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sql/ProcessSqlRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/processor/ProcessSqlRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sql/SqlTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/processor/SqlTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/CheckCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/CheckCommandUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/ConsoleDeveloperView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ConsoleDeveloperView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,47 +89,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/maxim/IdeaProjects/java-learning-crud-console-master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/maxim/IdeaProjects/Task_2-2_CRUD_JDBC/src/main/resources/jdbc.properties&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Task_2-2_CRUD_JDBC [test]">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task_2-2_CRUD_JDBC" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="init.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/init.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
     </configuration>
     <configuration name="Task_2-2_CRUD_JDBC [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
@@ -111,8 +163,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Maven.Task_2-2_CRUD_JDBC [test]" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Database Script.init.sql" />
+        <item itemvalue="Maven.Task_2-2_CRUD_JDBC [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +199,12 @@
       <workItem from="1682694506094" duration="628000" />
       <workItem from="1682767525366" duration="6005000" />
       <workItem from="1682867752680" duration="9348000" />
-      <workItem from="1682925428172" duration="10727000" />
+      <workItem from="1682925428172" duration="11673000" />
+      <workItem from="1683115139186" duration="11019000" />
+      <workItem from="1683187325032" duration="7122000" />
+      <workItem from="1683207988207" duration="7461000" />
+      <workItem from="1683627936704" duration="3283000" />
+      <workItem from="1683631908911" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="current work version">
       <created>1682922156091</created>
@@ -162,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682946327013</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="current work version 2">
+      <created>1682948397186</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682948397186</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,19 +246,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="current work version" />
-    <option name="LAST_COMMIT_MESSAGE" value="current work version" />
+    <MESSAGE value="current work version 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="current work version 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/DBUtils.java</url>
-          <line>13</line>
-          <properties class="controller.DBUtils" method="getConnection">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/util/JdbcUtils.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

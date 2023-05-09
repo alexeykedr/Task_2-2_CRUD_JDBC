@@ -1,14 +1,20 @@
 package service;
 
 import model.Developer;
-import model.GenericRepository;
-import model.Skill;
+import repository.GenericRepository;
 import repository.DeveloperRepository;
+import repository.jdbc.JdbcDeveloperRepositoryImpl;
 
 import java.util.List;
 
 public class DeveloperService implements GenericRepository<Developer, Long> {
-    private DeveloperRepository developerRepository;
+    final private DeveloperRepository developerRepository;
+
+    //TODO: apply for all other classes - done
+
+    public DeveloperService() {
+        this.developerRepository = new JdbcDeveloperRepositoryImpl();
+    }
 
     public DeveloperService(DeveloperRepository developerRepository) {
         this.developerRepository = developerRepository;

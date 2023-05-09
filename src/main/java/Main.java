@@ -1,13 +1,14 @@
 
 
 import model.Developer;
+import repository.jdbc.JdbcDeveloperRepositoryImpl;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         JdbcDeveloperRepositoryImpl jdbc = new JdbcDeveloperRepositoryImpl();
-        List <Developer> developers = jdbc.getDeveloperData("select * from developer");
-        System.out.println(developers);
+        List <Developer> developer = jdbc.getAll();
+        System.out.println(developer);
     }
 }
