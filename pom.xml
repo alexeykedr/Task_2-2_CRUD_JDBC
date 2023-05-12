@@ -13,6 +13,16 @@
         <maven.compiler.target>17</maven.compiler.target>
         <postgres.version>42.5.1</postgres.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <liquibase-maven-plugin-version>4.11.0</liquibase-maven-plugin-version>
+        <maven-compiler-plugin-version>3.10.1</maven-compiler-plugin-version>
+        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+
+        <junit-version>5.8.2</junit-version>
+        <mockito-verion>2.21.0</mockito-verion>
+        <junit-platform-surefire-provider.version>1.3.2</junit-platform-surefire-provider.version>
+
+        <profile.changeLogFile>src/main/resources/changelog.xml</profile.changeLogFile>
+        <profile.propertyFile>src/main/resources/liquibase.properties</profile.propertyFile>
     </properties>
 
     <dependencies>
@@ -21,8 +31,29 @@
             <artifactId>postgresql</artifactId>
             <version>${postgres.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito-verion}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-surefire-provider</artifactId>
+            <version>${junit-platform-surefire-provider.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liquibase-maven-plugin-version}</version>
+        </dependency>
     </dependencies>
-
 
 
 </project>

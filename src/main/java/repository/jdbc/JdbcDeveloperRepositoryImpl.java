@@ -108,12 +108,11 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
         return JdbcExecutor.transactionalExecute(connection -> {
             Map<Long, Developer> developerMap = new HashMap<>();
             try (PreparedStatement preparedStatement = connection.prepareStatement(
-                    /*"SELECT d.id, d.first_name, d.last_name, d.status, s.name as skill_name, sp.name as specialty_name " +
+                    "SELECT d.id, d.first_name, d.last_name, d.status, s.name as skill_name, sp.name as specialty_name " +
                             "FROM developers d " +
                             "LEFT JOIN developer_skills ds ON d.id = ds.developer_id " +
                             "LEFT JOIN skills s ON ds.skill_id = s.id " +
-                            "LEFT JOIN specialties sp ON d.specialty_id = sp.id; " +*/
-                    "select * from developers " +
+                            "LEFT JOIN specialties sp ON d.specialty_id = sp.id; " +
                             "")) {
                 ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -127,25 +126,25 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
                     developerMap.putIfAbsent(developerId, developer);
 
                     //SKILLS
-                    String skillIdString = resultSet.getString("skill.id");
-                    if (skillIdString == null) {
-                        continue;
-                    }
-                    long skillId = Long.parseLong(skillIdString);
-                    long skillDeveloperId = resultSet.getLong("developer_id");
-                    Developer developerRelatedToSkill = developerMap.get(skillDeveloperId);
-                    List<Skill> skillsFromMap = developerRelatedToSkill.getSkills();
-                    Skill skillFromMapPerDeveloper = null;
-                    if (skillsFromMap != null) {
-                        skillFromMapPerDeveloper = skillsFromMap.stream().parallel()
-                                .filter(skillFromMap -> skillFromMap.getId() == skillId)
-                                .findAny().orElse(null);
-                    }
-                    if (skillFromMapPerDeveloper == null) {
-                        String name = resultSet.getString("name");
-                        // дописать логику
-
-                    }
+//                    String skillIdString = resultSet.getString("skill_id");
+//                    if (skillIdString == null) {
+//                        continue;
+//                    }
+//                    long skillId = Long.parseLong(skillIdString);
+//                    long skillDeveloperId = resultSet.getLong("developer_id");
+//                    Developer developerRelatedToSkill = developerMap.get(skillDeveloperId);
+//                    List<Skill> skillsFromMap = developerRelatedToSkill.getSkills();
+//                    Skill skillFromMapPerDeveloper = null;
+//                    if (skillsFromMap != null) {
+//                        skillFromMapPerDeveloper = skillsFromMap.stream().parallel()
+//                                .filter(skillFromMap -> skillFromMap.getId() == skillId)
+//                                .findAny().orElse(null);
+//                    }
+//                    if (skillFromMapPerDeveloper == null) {
+//                        String name = resultSet.getString("name");
+//                        //todo дописать логику?
+//
+//                    }
 
                 }
 

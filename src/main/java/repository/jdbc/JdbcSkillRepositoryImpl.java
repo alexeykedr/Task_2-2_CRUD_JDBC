@@ -97,5 +97,5 @@ public class JdbcSkillRepositoryImpl implements SkillRepository {
             return skills;
         });
     }
-    //TODO: to make Jdbc*Impl's
+    //TODO: to make Jdbc*Impl's - done
 }
