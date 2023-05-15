@@ -13,6 +13,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
+//import static util.JdbcUtils.connection;
+import static util.JdbcUtils.prepareStatement;
+
 
 public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
     @Override
@@ -68,9 +71,14 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
     @Override
     public Developer getById(Long id) {
         // TODO: use complex JOIN to get all data - done?
-        return JdbcExecutor.execute("SELECT * FROM developer WHERE id =?", preparedStatement -> {
+        return JdbcExecutor.execute("" +
+                "SELECT d.id, d.first_name, d.last_name, d.status, s.name as skill_name, sp.name as specialty_name " +
+                "FROM developers d" +
+                "LEFT JOIN developer_skills ds ON d.id = ds.developer_id " +
+                "LEFT JOIN skills s ON ds.skill_id = s.id " +
+                "LEFT JOIN specialties sp ON d.specialty_id = sp.id; ", preparedStatement -> {
+
             try {
-                //complex join is in getAll(), what I need to do here?
                 preparedStatement.setLong(1, id);
                 ResultSet resultSet = preparedStatement.executeQuery();
                 if (!resultSet.next()) {
@@ -108,7 +116,7 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
         return JdbcExecutor.transactionalExecute(connection -> {
             Map<Long, Developer> developerMap = new HashMap<>();
             try (PreparedStatement preparedStatement = connection.prepareStatement(
-                    "SELECT d.id, d.first_name, d.last_name, d.status, s.name as skill_name, sp.name as specialty_name " +
+                    "SELECT d.id, d.first_name, d.last_name, d.status, s.name as skill_name, s.id as skill_id, sp.name as specialty_name " +
                             "FROM developers d " +
                             "LEFT JOIN developer_skills ds ON d.id = ds.developer_id " +
                             "LEFT JOIN skills s ON ds.skill_id = s.id " +
@@ -126,32 +134,48 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
                     developerMap.putIfAbsent(developerId, developer);
 
                     //SKILLS
-//                    String skillIdString = resultSet.getString("skill_id");
-//                    if (skillIdString == null) {
-//                        continue;
-//                    }
-//                    long skillId = Long.parseLong(skillIdString);
-//                    long skillDeveloperId = resultSet.getLong("developer_id");
-//                    Developer developerRelatedToSkill = developerMap.get(skillDeveloperId);
-//                    List<Skill> skillsFromMap = developerRelatedToSkill.getSkills();
-//                    Skill skillFromMapPerDeveloper = null;
-//                    if (skillsFromMap != null) {
-//                        skillFromMapPerDeveloper = skillsFromMap.stream().parallel()
-//                                .filter(skillFromMap -> skillFromMap.getId() == skillId)
-//                                .findAny().orElse(null);
-//                    }
-//                    if (skillFromMapPerDeveloper == null) {
-//                        String name = resultSet.getString("name");
-//                        //todo дописать логику?
-//
-//                    }
+                    String skillIdString = resultSet.getString("skill_id");
+                    if (skillIdString == null) {
+                        continue;
+                    }
+                    long skillId = Long.parseLong(skillIdString);
+                    long skillDeveloperId = resultSet.getLong("developer_id");
+                    Developer developerRelatedToSkill = developerMap.get(skillDeveloperId);
+                    List<Skill> skillsFromMap = developerRelatedToSkill.getSkills();
+                    Skill skillFromMapPerDeveloper = null;
+                    if (skillsFromMap != null) {
+                        skillFromMapPerDeveloper = skillsFromMap.stream().parallel()
+                                .filter(skillFromMap -> skillFromMap.getId() == skillId)
+                                .findAny().orElse(null);
+                    }
+                    if (skillFromMapPerDeveloper == null) {
+                        String name = resultSet.getString("name");
+                        Skill skill = new Skill(skillId, name);
+                        if (developerRelatedToSkill.getSkills() == null) {
+                            developerRelatedToSkill.setSkills(new ArrayList<>());
+                        }
+                        developerRelatedToSkill.addSkill(skill);
+
+                    }
+
+                    // SPECIALTY
+                    String specialtyIdString = resultSet.getString("id");
+                    if (specialtyIdString == null) {
+                        continue;
+                    }
+                    long specialtyId = Long.parseLong(specialtyIdString);
+                    String specialtyName = resultSet.getString("name");
+                    long developerSkillId = resultSet.getLong("skill_id");
+                    Specialty specialty = new Specialty(specialtyId, specialtyName, developerSkillId);
+
 
                 }
 
-                return new ArrayList<>();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
+
+            return developerMap.values().stream().toList();
         });
     }
 
@@ -164,20 +188,20 @@ public class JdbcDeveloperRepositoryImpl implements DeveloperRepository {
     }
 
 
-    private void  saveSkill(List<Skill> skills) throws SQLException {
-      try (PreparedStatement preparedStatement = JdbcUtils.prepareStatement("INSERT INTO skill (id, name) VALUES (?,?)")){
-          for (Skill skill: skills) {
-              preparedStatement.setLong(1, skill.getId());
-              preparedStatement.setString(2, skill.getName());
-              preparedStatement.executeUpdate();
+    private void saveSkill(List<Skill> skills) throws SQLException {
+        try (PreparedStatement preparedStatement = JdbcUtils.prepareStatement("INSERT INTO skill (id, name) VALUES (?,?)")) {
+            for (Skill skill : skills) {
+                preparedStatement.setLong(1, skill.getId());
+                preparedStatement.setString(2, skill.getName());
+                preparedStatement.executeUpdate();
 
-          }
+            }
 
-      }
+        }
     }
 
     private static void saveSpecialty(Specialty specialty) throws SQLException {
-        try (PreparedStatement prepareStatement = JdbcUtils.prepareStatement("INSERT INTO specialty (id, name) VALUES (?,?)")){
+        try (PreparedStatement prepareStatement = JdbcUtils.prepareStatement("INSERT INTO specialty (id, name) VALUES (?,?)")) {
             prepareStatement.setLong(1, specialty.getId());
             prepareStatement.setString(2, specialty.getName());
 

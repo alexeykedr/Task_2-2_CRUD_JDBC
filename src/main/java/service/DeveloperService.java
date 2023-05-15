@@ -8,9 +8,9 @@ import repository.jdbc.JdbcDeveloperRepositoryImpl;
 import java.util.List;
 
 public class DeveloperService implements GenericRepository<Developer, Long> {
-    final private DeveloperRepository developerRepository;
+    private final DeveloperRepository developerRepository;
 
-    //TODO: apply for all other classes - done
+
 
     public DeveloperService() {
         this.developerRepository = new JdbcDeveloperRepositoryImpl();

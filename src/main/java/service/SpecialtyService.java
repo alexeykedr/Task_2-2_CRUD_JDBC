@@ -8,7 +8,7 @@ import repository.jdbc.JdbcSpecialtyRepositoryImpl;
 import java.util.List;
 
 public class SpecialtyService implements GenericRepository<Specialty, Long> {
-    final private SpecialtyRepository specialtyRepository;
+    private final SpecialtyRepository specialtyRepository;
 
     public SpecialtyService() {
         this.specialtyRepository = new JdbcSpecialtyRepositoryImpl();

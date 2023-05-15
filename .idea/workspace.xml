@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792dd0ae-3c8e-46b6-9c0b-1fe0c1787cb1" name="Changes" comment="current work version 3">
+    <list default="true" id="792dd0ae-3c8e-46b6-9c0b-1fe0c1787cb1" name="Changes" comment="current version, tests have NPE">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcDeveloperRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcDeveloperRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcSkillRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcSkillRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JdbcUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DeveloperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DeveloperService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SkillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SpecialtyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SpecialtyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/DeveloperServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/DeveloperServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -102,7 +98,7 @@
       <recent name="service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DeveloperServiceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task_2-2_CRUD_JDBC" />
@@ -114,6 +110,37 @@
       <script-file value="$PROJECT_DIR$/src/main/resources/init.sql" />
       <script-mode>FILE</script-mode>
       <method v="2" />
+    </configuration>
+    <configuration name="DeveloperServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task_2-2_CRUD_JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.DeveloperServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeveloperServiceTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task_2-2_CRUD_JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.DeveloperServiceTest" />
+      <option name="METHOD_NAME" value="save" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Task_2-2_CRUD_JDBC [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
@@ -142,6 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DeveloperServiceTest" />
+        <item itemvalue="JUnit.DeveloperServiceTest.save" />
         <item itemvalue="Maven.Task_2-2_CRUD_JDBC [test]" />
         <item itemvalue="Database Script.init.sql" />
         <item itemvalue="Application.Main" />
@@ -188,6 +217,10 @@
       <workItem from="1683635090895" duration="14058000" />
       <workItem from="1683873534177" duration="224000" />
       <workItem from="1683873856400" duration="7685000" />
+      <workItem from="1683884660544" duration="16961000" />
+      <workItem from="1684416457119" duration="345000" />
+      <workItem from="1684416816689" duration="1072000" />
+      <workItem from="1684422582358" duration="3892000" />
     </task>
     <task id="LOCAL-00001" summary="current work version">
       <created>1682922156091</created>
@@ -231,7 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683632531339</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="current work version alvost final">
+      <created>1683884819722</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683884819722</updated>
+    </task>
+    <task id="LOCAL-00008" summary="current version, tests have NPE">
+      <created>1684167125676</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684167125676</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +299,25 @@
     <MESSAGE value="current work version" />
     <MESSAGE value="current work version 2" />
     <MESSAGE value="current work version 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="current work version 3" />
+    <MESSAGE value="current work version alvost final" />
+    <MESSAGE value="current version, tests have NPE" />
+    <option name="LAST_COMMIT_MESSAGE" value="current version, tests have NPE" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/processor/JdbcExecutor.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/util/JdbcUtils.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

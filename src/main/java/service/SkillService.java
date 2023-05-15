@@ -3,13 +3,13 @@ package service;
 import repository.GenericRepository;
 import model.Skill;
 import repository.SkillRepository;
-import repository.jdbc.JdbcDeveloperRepositoryImpl;
+
 import repository.jdbc.JdbcSkillRepositoryImpl;
 
 import java.util.List;
 
 public class SkillService implements GenericRepository<Skill, Long> {
-    final private SkillRepository skillRepository;
+    private final SkillRepository skillRepository;
 
     public SkillService() {
         this.skillRepository = new JdbcSkillRepositoryImpl();

@@ -19,7 +19,8 @@ class DeveloperServiceTest {
 
 
     @Mock
-     DeveloperRepository developerRepositoryMock;
+    private DeveloperRepository developerRepositoryMock;
+    private DeveloperService service;
 
     @InjectMocks
     DeveloperService developerService = new DeveloperService(developerRepositoryMock);
@@ -32,8 +33,13 @@ class DeveloperServiceTest {
     public void init() {
         MockitoAnnotations.initMocks(this);
     }
+
     @BeforeEach
     void setUp(){
+        // for initialization developerRepository
+        developerRepositoryMock = Mockito.mock(DeveloperRepository.class);
+        developerService = new DeveloperService(developerRepositoryMock);
+
         Mockito.reset(developerRepositoryMock);
         developerCaptor = ArgumentCaptor.forClass(Developer.class);
         idCaptor = ArgumentCaptor.forClass(Long.class);
