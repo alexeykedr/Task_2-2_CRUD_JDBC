@@ -66,6 +66,7 @@ public class Developer {
         this.skills = skills;
     }
 
+
     public Specialty getSpecialty() {
         return specialty;
     }
@@ -107,6 +108,10 @@ public class Developer {
     }
     public boolean isNew() {
         return getId() == null;
+    }
+
+    public void addSkill(Skill skill){
+        skills.add(skill);
     }
 
 

@@ -31,4 +31,10 @@ CREATE TABLE IF NOT EXISTS developer_skills
 INSERT INTO developers (first_name, last_name)
 VALUES ('Petr', 'Petrov');
 
---DROP TABLE IF EXISTS specialties CASCADE ;--
+-- checked request --
+
+-- SELECT d.id, d.first_name, d.last_name, d.status, s.name as skill_name, sp.name as specialty_name
+--                             FROM developers d
+--                             LEFT JOIN developer_skills ds ON d.id = ds.developer_id
+--                             LEFT JOIN skills s ON ds.skill_id = s.id
+--                             LEFT JOIN specialties sp ON d.specialty_id = sp.id;

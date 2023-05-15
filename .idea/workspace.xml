@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792dd0ae-3c8e-46b6-9c0b-1fe0c1787cb1" name="Changes" comment="current work version 3">
+    <list default="true" id="792dd0ae-3c8e-46b6-9c0b-1fe0c1787cb1" name="Changes" comment="current work version alvost final">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12ab7650bcbaf631b48644d097e75bc9108e884f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bec048367fbc52ea0da61978f6e5478e5cc2a15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e13603351181a6fd2ce7433968092d39069eaaa6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/2/12ab7650bcbaf631b48644d097e75bc9108e884f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/b/7bec048367fbc52ea0da61978f6e5478e5cc2a15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/1/e13603351181a6fd2ce7433968092d39069eaaa6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Specialty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Specialty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcDeveloperRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcDeveloperRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcSkillRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/jdbc/JdbcSkillRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JdbcUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       <recent name="service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DeveloperServiceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task_2-2_CRUD_JDBC" />
@@ -114,6 +117,21 @@
       <script-file value="$PROJECT_DIR$/src/main/resources/init.sql" />
       <script-mode>FILE</script-mode>
       <method v="2" />
+    </configuration>
+    <configuration name="DeveloperServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task_2-2_CRUD_JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.DeveloperServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Task_2-2_CRUD_JDBC [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
@@ -142,9 +160,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DeveloperServiceTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Maven.Task_2-2_CRUD_JDBC [test]" />
         <item itemvalue="Database Script.init.sql" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +207,7 @@
       <workItem from="1683635090895" duration="14058000" />
       <workItem from="1683873534177" duration="224000" />
       <workItem from="1683873856400" duration="7685000" />
+      <workItem from="1683884660544" duration="16230000" />
     </task>
     <task id="LOCAL-00001" summary="current work version">
       <created>1682922156091</created>
@@ -231,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683632531339</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="current work version alvost final">
+      <created>1683884819722</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683884819722</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +279,24 @@
     <MESSAGE value="current work version" />
     <MESSAGE value="current work version 2" />
     <MESSAGE value="current work version 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="current work version 3" />
+    <MESSAGE value="current work version alvost final" />
+    <option name="LAST_COMMIT_MESSAGE" value="current work version alvost final" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/processor/JdbcExecutor.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/util/JdbcUtils.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

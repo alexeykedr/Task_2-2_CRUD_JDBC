@@ -5,10 +5,24 @@ import java.util.Objects;
 public class Specialty {
     private Long id;
     private String name;
+    private long skillId;
 
     public Specialty(Long id, String name) {
         this.id = id;
         this.name = name;
+        this.skillId = Long.parseLong(null);
+    }
+
+    public Specialty(String name, long skillId) {
+        this.id = Long.parseLong(null);
+        this.name = name;
+        this.skillId = skillId;
+    }
+
+    public Specialty(Long id, String name, long skillId) {
+        this.id = id;
+        this.name = name;
+        this.skillId = skillId;
     }
 
     public Specialty() {
@@ -28,6 +42,14 @@ public class Specialty {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public long getSkillId() {
+        return skillId;
+    }
+
+    public void setSkillId(long skillId) {
+        this.skillId = skillId;
     }
 
     @Override

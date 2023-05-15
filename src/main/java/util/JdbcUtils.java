@@ -21,8 +21,10 @@ public class JdbcUtils {
                 final String dbPassword = properties.getProperty("password");
 
                 Class.forName(dbDriver);
-                // падает getConnection(), пока не известно почему
+
+                // не отрабатывает по неизвестной причине
                 connection = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+
 
             } catch (IOException | ClassNotFoundException | SQLException e) {
                 throw new RuntimeException(e);
